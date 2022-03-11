@@ -1,0 +1,34 @@
+body {
+    display: grid;
+    padding: 10px;
+    grid-gap: 10px;
+}
+#head {
+    margin: auto;
+    height: auto;
+    width: auto;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -2;
+}
+img {
+    height: 150px;
+    width: 150px;
+    border-radius: 100%;
+}
+#body {
+    padding-top: 200px;
+}
+.item {
+    height: fit-content;
+    width: fit-content;
+    display: grid;
+    grid-gap: 10px;
+}
+.bodyitem {
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 3px 10px lightgray;
+}
