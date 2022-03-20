@@ -41,4 +41,6 @@ window.onscroll = function () {
     document.getElementById('head').style.opacity = opacity;
     document.getElementById('head').style.transform = "scale(" + scale + ")";
 }
-openTab(onclick, 'home');
+window.onload = function () {
+    document.getElementById('homeButton').click();
+}
