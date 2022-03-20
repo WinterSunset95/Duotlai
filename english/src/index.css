@@ -10,7 +10,7 @@ body {
     left: 0;
     margin: 0;
     padding: 20px;
-    z-index: -2;
+    z-index: -1;
     opacity: 1;
     display: grid;
     grid-gap: 10px;
@@ -27,6 +27,7 @@ body {
     width: 150px;
     border-radius: 100%;
     grid-area: head_img;
+    border: 1px solid gray;
 }
 #head_item1 {
     grid-area: head_item1;
@@ -51,6 +52,39 @@ body {
 .bodyitem {
     display: grid;
     grid-gap: 10px;
+}
+#backToTop {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    border: 2px solid gray;
+    border-radius: 100%;
+    height: 40px;
+    width: 40px;
+    transition: ease-out 0.3s;
+}
+.buttonDiv {
+    height: 3px;
+    width: 20px;
+    background-color: black;
+}
+#buttonDiv1 {
+    transform: rotateZ(60deg) translateX(4px) translateY(-6px);
+    left: 5px;
+}
+#buttonDiv2 {
+    transform: rotateZ(120deg) translateX(0px) translateY(5px);
+}
+#tabs {
+    display: flex;
+    border-bottom: 1px solid gray;
+    flex-grow: 1fr 1fr 1fr 1fr;
+    z-index: -2;
+}
+.tablinks {
+    font-size: 20px;
+    border: none;
+    width: 100%;
 }
 @media only screen and (min-width:600px) {
     #head {
@@ -96,7 +130,7 @@ body {
     }
     #tabs {
         grid-area: tabs;
-        padding: 10px 10px 10px 330px !important;
+        padding: 10px 10px 0 330px !important;
     }
     .mainbar {
         padding: 10px 10px 10px 330px !important;

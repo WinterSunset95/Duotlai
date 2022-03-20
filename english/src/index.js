@@ -6,11 +6,11 @@ var tabs = document.getElementById('tabs');
 tabs.style.paddingTop = height + "px";
 window.onscroll = function () {
     var currentScrollPos = window.pageYOffset;
-    //if (prevScrollPos > currentScrollPos) {
-    //    document.getElementById("footer").style.bottom = "-70px"; 
-    //} else {
-    //    document.getElementById("footer").style.bottom = "5px"
-    //}
+    if (prevScrollPos > currentScrollPos) {
+        document.getElementById("backToTop").style.bottom = "-70px"; 
+    } else {
+        document.getElementById("backToTop").style.bottom = "15px"
+    }
     if (currentScrollPos <= checkpoint) {
         opacity = 1 - currentScrollPos/checkpoint;
         scale = 1 - currentScrollPos/1000;
