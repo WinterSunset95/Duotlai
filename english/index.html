@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Duotlai Blog</title>
     <link rel="stylesheet" href="src/index.css">
+    <link rel="stylesheet" href="src/home.css">
     <link rel="preload" as="image" href="../assets/test.png">
 </head>
 <body>
-    <div id="head" class="item">
+    <div id="head">
         <div id="img_container">
             <img id="head_img" src="../assets/test.png" alt="anime cutie" srcset="">
             <div id="head_item1" class="head_item">Welcome to the blog post of <strong>Duotlai</strong><br>
@@ -16,11 +17,21 @@
         </div>
         <div id="head_item2" class="head_item">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi perspiciatis dolor, cupiditate atque .</div>
     </div>
-    <div id="body" class="item">
-        <div class="bodyitem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente vero, eveniet aut blanditiis, eligendi quam ratione sit dolores maxime sed nulla voluptatibus earum repellat ullam temporibus deleniti. Voluptatibus, repellendus veritatis.</div>
-        <div class="bodyitem">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur quasi aliquam laboriosam, suscipit sed deleniti aperiam quam consequatur esse, ab magnam dolorem. Dolore fugiat dolor nisi iste nostrum distinctio consequatur.</div>
-        <div class="bodyitem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus consequuntur impedit ipsam explicabo, excepturi alias repudiandae, nostrum modi dolor perferendis aliquam officiis laudantium exercitationem odio deleniti vitae, architecto neque nobis!</div>
+    <div id="tabs">
+        <div id="sidebar" class="mainbar"></div>
+        <button class="tablinks">Home</button>
+        <button class="tablinks">Gallery</button>
+        <button class="tablinks">Videos</button>
+        <button class="tablinks">Read</button>
     </div>
+    <div id="home" class="bodyitem mainbar">
+        <div class="par">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente vero, eveniet aut blanditiis, eligendi quam ratione sit dolores maxime sed nulla voluptatibus earum repellat ullam temporibus deleniti. Voluptatibus, repellendus veritatis.</div>
+        <div class="par">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur quasi aliquam laboriosam, suscipit sed deleniti aperiam quam consequatur esse, ab magnam dolorem. Dolore fugiat dolor nisi iste nostrum distinctio consequatur.</div>
+        <div class="par">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus consequuntur impedit ipsam explicabo, excepturi alias repudiandae, nostrum modi dolor perferendis aliquam officiis laudantium exercitationem odio deleniti vitae, architecto neque nobis!</div>
+    </div>
+    <div id="" class="bodyitem" display="none"></div>
+    <div id="" class="bodyitem" display="none"></div>
+    <div id="" class="bodyitem" display="none"></div>
     <script src="src/index.js"></script>                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
 </body>
 </html>

@@ -4,7 +4,8 @@ body {
     grid-gap: 10px;
 }
 #head {
-    grid-area: head;
+    height: fit-content;
+    width: fit-content;
     position: fixed;
     left: 0;
     margin: 0;
@@ -12,6 +13,7 @@ body {
     z-index: -2;
     opacity: 1;
     display: grid;
+    grid-gap: 10px;
     grid-template-areas: 
     'img_container'
     'head_item2'
@@ -40,22 +42,6 @@ body {
 .head_item {
     text-align: center;
 }
-#body {
-    grid-area: body;
-    padding-top: 450px;
-    padding-bottom: 50px;
-}
-#footer {
-    position: fixed;
-    height: fit-content;
-    width: fit-content;
-    z-index: 1;
-    background: transparent;
-    display: flex;
-    bottom: 5px;
-    right: 10px;
-    transition: ease-in 0.2s;
-}
 .item {
     height: fit-content;
     width: fit-content;
@@ -63,16 +49,9 @@ body {
     grid-gap: 10px;
 }
 .bodyitem {
-    background-color: rgba(255, 255, 255, 0.5);
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0px 3px 10px lightgray;
+    display: grid;
+    grid-gap: 10px;
 }
-.icon {
-    height: 40px;
-    width: 50px;
-}
-
 @media only screen and (min-width:600px) {
     #head {
         width: inherit;
@@ -88,19 +67,20 @@ body {
     #head_item1 {
         width: 100px;
     }
-    #body {
-        padding: 0;
+    .bodyitem {
+        padding: 10px;
     }
 }
 @media only screen and (min-width:900px) {
     body {
         grid-template-areas: 
-        'head body body'
-        'head body body';
+        'tabs'
+        'bodytab';
     }
     #head {
-        position: relative;
-        width: inherit;
+        left: 10px;
+        top: 10px;
+        width: 300px;
         grid-template-areas: 
         'img_container'
         'head_item2';
@@ -114,7 +94,11 @@ body {
     #head_item1 {
         width: 200px;
     }
-    #body {
-        padding: 10px !important;
+    #tabs {
+        grid-area: tabs;
+        padding: 10px 10px 10px 330px !important;
+    }
+    .mainbar {
+        padding: 10px 10px 10px 330px !important;
     }
 }

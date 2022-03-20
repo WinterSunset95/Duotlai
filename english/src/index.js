@@ -1,9 +1,9 @@
 var prevScrollPos = window.pageYOffset;
-var checkpoint = 400;
 var head = document.getElementById('head');
+var checkpoint = head.offsetHeight;
 var height = head.offsetHeight + 10;
-var body = document.getElementById('body');
-body.style.paddingTop = height + "px";
+var tabs = document.getElementById('tabs');
+tabs.style.paddingTop = height + "px";
 window.onscroll = function () {
     var currentScrollPos = window.pageYOffset;
     //if (prevScrollPos > currentScrollPos) {
