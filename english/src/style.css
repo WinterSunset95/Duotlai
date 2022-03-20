@@ -95,8 +95,6 @@ iframe {
 .zoom:hover {
     transform: scale(1.05);
 }
-
-
 @media only screen and (min-width: 600px) {
     #head1 {
         font-size: 40px;
