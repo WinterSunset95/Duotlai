@@ -4,6 +4,23 @@ var checkpoint = head.offsetHeight;
 var height = head.offsetHeight + 10;
 var tabs = document.getElementById('tabs');
 tabs.style.paddingTop = height + "px";
+function scrollToTop() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+function openTab(evt, tabName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("bodyitem");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace("active", "");
+    }
+    document.getElementById(tabName).style.display = "block";
+    evt.currentTarget.className += "active";
+}
 window.onscroll = function () {
     var currentScrollPos = window.pageYOffset;
     if (prevScrollPos > currentScrollPos) {
@@ -24,3 +41,4 @@ window.onscroll = function () {
     document.getElementById('head').style.opacity = opacity;
     document.getElementById('head').style.transform = "scale(" + scale + ")";
 }
+openTab(click, 'home');

@@ -79,12 +79,18 @@ body {
     display: flex;
     border-bottom: 1px solid gray;
     flex-grow: 1fr 1fr 1fr 1fr;
-    z-index: -2;
+    z-index: 0;
 }
 .tablinks {
-    font-size: 20px;
+    font-size: 15px;
     border: none;
     width: 100%;
+}
+.tablinks:hover {
+    background-color: #ccc;
+}
+.tablinks.active {
+    background-color: rgb(184, 181, 181);
 }
 @media only screen and (min-width:600px) {
     #head {
@@ -104,6 +110,9 @@ body {
     .bodyitem {
         padding: 10px;
     }
+    .tablinks {
+        font-size: 20px;
+    }
 }
 @media only screen and (min-width:900px) {
     body {
@@ -112,6 +121,7 @@ body {
         'bodytab';
     }
     #head {
+        z-index: 1;
         left: 10px;
         top: 10px;
         width: 300px;
@@ -132,7 +142,11 @@ body {
         grid-area: tabs;
         padding: 10px 10px 0 330px !important;
     }
-    .mainbar {
+    .tablinks {
+        font-size: 25px;
+    }
+    .bodyitem {
         padding: 10px 10px 10px 330px !important;
     }
+
 }

@@ -6,6 +6,7 @@
     <title>Duotlai Blog</title>
     <link rel="stylesheet" href="src/index.css">
     <link rel="stylesheet" href="src/home.css">
+    <link rel="stylesheet" href="src/video.css">
     <link rel="preload" as="image" href="../assets/test.png">
 </head>
 <body>
@@ -18,20 +19,31 @@
         <div id="head_item2" class="head_item">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi perspiciatis dolor, cupiditate atque .</div>
     </div>
     <div id="tabs">
-        <button class="tablinks">Home</button>
-        <button class="tablinks">Gallery</button>
-        <button class="tablinks">Videos</button>
-        <button class="tablinks">Read</button>
+        <button class="tablinks active" onclick="openTab(event, 'home')">Home</button>
+        <button class="tablinks active" onclick="openTab(event, 'gallery')">Gallery</button>
+        <button class="tablinks active" onclick="openTab(event, 'videos')">Videos</button>
+        <button class="tablinks active" onclick="openTab(event, 'read')">Read</button>
     </div>
-    <div id="home" class="bodyitem mainbar">
+    <div id="home" class="bodyitem">
         <div class="par">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente vero, eveniet aut blanditiis, eligendi quam ratione sit dolores maxime sed nulla voluptatibus earum repellat ullam temporibus deleniti. Voluptatibus, repellendus veritatis.</div>
         <div class="par">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur quasi aliquam laboriosam, suscipit sed deleniti aperiam quam consequatur esse, ab magnam dolorem. Dolore fugiat dolor nisi iste nostrum distinctio consequatur.</div>
         <div class="par">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus consequuntur impedit ipsam explicabo, excepturi alias repudiandae, nostrum modi dolor perferendis aliquam officiis laudantium exercitationem odio deleniti vitae, architecto neque nobis!</div>
     </div>
-    <div id="" class="bodyitem" display="none"></div>
-    <div id="" class="bodyitem" display="none"></div>
-    <div id="" class="bodyitem" display="none"></div>
-    <button id="backToTop">
+    <div id="gallery" class="bodyitem" display="none"></div>
+    <div id="videos" class="bodyitem" display="none">
+            <div class="yt-container"><iframe src="https://www.youtube.com/embed/EhL12l1IqK0" frameborder="0"></iframe></div>
+            <div class="yt-container"><iframe src="https://www.youtube.com/embed/EhL12l1IqK0" frameborder="0"></iframe></div>
+            <div class="yt-container"><iframe src="https://www.youtube.com/embed/EhL12l1IqK0" frameborder="0"></iframe></div>
+            <div class="yt-container"><iframe src="https://www.youtube.com/embed/EhL12l1IqK0" frameborder="0"></iframe></div>
+            <div class="yt-container"><iframe src="https://www.youtube.com/embed/EhL12l1IqK0" frameborder="0"></iframe></div>
+            <div class="yt-container"><iframe src="https://www.youtube.com/embed/EhL12l1IqK0" frameborder="0"></iframe></div>
+            <div class="yt-container"><iframe src="https://www.youtube.com/embed/EhL12l1IqK0" frameborder="0"></iframe></div>
+            <div class="yt-container"><iframe src="https://www.youtube.com/embed/EhL12l1IqK0" frameborder="0"></iframe></div>
+            <div class="yt-container"><iframe src="https://www.youtube.com/embed/EhL12l1IqK0" frameborder="0"></iframe></div>
+            <div class="yt-container"><iframe src="https://www.youtube.com/embed/EhL12l1IqK0" frameborder="0"></iframe></div>
+    </div>
+    <div id="read" class="bodyitem" display="none"></div>
+    <button id="backToTop" onclick="scrollToTop()">
         <div class="buttonDiv" id="buttonDiv1"></div>
         <div class="buttonDiv" id="buttonDiv2"></div>
     </button>
