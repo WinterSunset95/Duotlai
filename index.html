@@ -21,7 +21,7 @@
     <div id="tabs">
         <button id="homeButton" class="tablinks active" onclick="openTab(event, 'home')">Home</button>
         <button class="tablinks active" onclick="openTab(event, 'gallery')">Gallery</button>
-        <button class="tablinks active" onclick="openTab(event, 'videos')">Videos</button>
+        <button class="tablinks active" onclick="openTab(event, 'videos'); loadVideos()">Videos</button>
         <button class="tablinks active" onclick="openTab(event, 'read')">Read</button>
     </div>
     <div id="home" class="bodyitem">
@@ -30,17 +30,8 @@
         <div class="par">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus consequuntur impedit ipsam explicabo, excepturi alias repudiandae, nostrum modi dolor perferendis aliquam officiis laudantium exercitationem odio deleniti vitae, architecto neque nobis!</div>
     </div>
     <div id="gallery" class="bodyitem" display="none"></div>
-    <div id="videos" class="bodyitem" display="none">
-            <div class="yt-container"><iframe src="https://www.youtube.com/embed/EhL12l1IqK0" frameborder="0"></iframe></div>
-            <div class="yt-container"><iframe src="https://www.youtube.com/embed/EhL12l1IqK0" frameborder="0"></iframe></div>
-            <div class="yt-container"><iframe src="https://www.youtube.com/embed/EhL12l1IqK0" frameborder="0"></iframe></div>
-            <div class="yt-container"><iframe src="https://www.youtube.com/embed/EhL12l1IqK0" frameborder="0"></iframe></div>
-            <div class="yt-container"><iframe src="https://www.youtube.com/embed/EhL12l1IqK0" frameborder="0"></iframe></div>
-            <div class="yt-container"><iframe src="https://www.youtube.com/embed/EhL12l1IqK0" frameborder="0"></iframe></div>
-            <div class="yt-container"><iframe src="https://www.youtube.com/embed/EhL12l1IqK0" frameborder="0"></iframe></div>
-            <div class="yt-container"><iframe src="https://www.youtube.com/embed/EhL12l1IqK0" frameborder="0"></iframe></div>
-            <div class="yt-container"><iframe src="https://www.youtube.com/embed/EhL12l1IqK0" frameborder="0"></iframe></div>
-            <div class="yt-container"><iframe src="https://www.youtube.com/embed/EhL12l1IqK0" frameborder="0"></iframe></div>
+    <div id="videos" class="bodyitem" display="none" w3-include-html="src/video.html">
+            
     </div>
     <div id="read" class="bodyitem" display="none"></div>
     <button id="backToTop" onclick="scrollToTop()">

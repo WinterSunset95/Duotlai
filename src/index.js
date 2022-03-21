@@ -12,13 +12,13 @@ function openTab(evt, tabName) {
     var i, tabcontent, tablinks;
     tabcontent = document.getElementsByClassName("bodyitem");
     for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.visibility = "none";
+        tabcontent[i].style.display = "none";
     }
     tablinks = document.getElementsByClassName("tablinks");
     for (i = 0; i < tablinks.length; i++) {
         tablinks[i].className = tablinks[i].className.replace("active", "");
     }
-    document.getElementById(tabName).style.visibility = "visible";
+    document.getElementById(tabName).style.display = "grid";
     evt.currentTarget.className += "active";
 }
 window.onscroll = function () {
@@ -41,6 +41,32 @@ window.onscroll = function () {
     document.getElementById('head').style.opacity = opacity;
     document.getElementById('head').style.transform = "scale(" + scale + ")";
 }
+function loadVideos() {
+    var z, i, elmnt, file, xhttp;
+    z = document.getElementsByTagName("*");
+    for (i=0; i<z.length; i++) {
+        elmnt = z[i];
+        file = elmnt.getAttribute("w3-include-html");
+        if (file) {
+            xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == 4) {
+                    if (this.status == 200) {
+                        elmnt.innerHTML = this.responseText;
+                    }
+                    if (this.status == 404) {
+                        elmnt.innerHTML = "Page not found.";
+                    }
+                    elmnt.removeAttribute("w3-include-html");
+                    includeHTML();
+                }
+            }
+            xhttp.open("GET", file, true);
+            xhttp.send();
+            return;
+        }
+    }
+};
 window.onload = function () {
     document.getElementById('homeButton').click();
 }
