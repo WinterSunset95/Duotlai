@@ -41,7 +41,7 @@ window.onscroll = function () {
     document.getElementById('head').style.opacity = opacity;
     document.getElementById('head').style.transform = "scale(" + scale + ")";
 }
-function loadVideos() {
+function loadExternal() {
     var z, i, elmnt, file, xhttp;
     z = document.getElementsByTagName("*");
     for (i=0; i<z.length; i++) {
@@ -58,7 +58,7 @@ function loadVideos() {
                         elmnt.innerHTML = "Page not found.";
                     }
                     elmnt.removeAttribute("w3-include-html");
-                    includeHTML();
+                    includeExternal();
                 }
             }
             xhttp.open("GET", file, true);

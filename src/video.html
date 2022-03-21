@@ -10,3 +10,30 @@
 <iframe class="yt-container zoom" src="https://youtube.com/embed/Zr_ew-GOAGA" frameborder="0"></iframe>
 <iframe class="yt-container zoom" src="https://youtube.com/embed/4ONcebM_nGw" frameborder="0"></iframe>
 
+<style>
+#videos {
+    width: -webkit-fill-available;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(200px, 1fr));
+}
+.yt-container {
+    height: 100%;
+    width: 100%;
+    min-width: 100px;
+    border: none;
+    border-radius: 10px;
+    transition: transform .2s;
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    box-shadow: 3px 3px 5px gray;
+}
+iframe {
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+}
+.yt-container:hover {
+    transform: scale(1.05);
+}
+</style>

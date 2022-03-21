@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Duotlai Blog</title>
     <link rel="stylesheet" href="src/index.css">
-    <link rel="stylesheet" href="src/home.css">
-    <link rel="stylesheet" href="src/video.css">
     <link rel="preload" as="image" href="assets/test.png">
 </head>
 <body>
@@ -21,19 +19,13 @@
     <div id="tabs">
         <button id="homeButton" class="tablinks active" onclick="openTab(event, 'home')">Home</button>
         <button class="tablinks active" onclick="openTab(event, 'gallery')">Gallery</button>
-        <button class="tablinks active" onclick="openTab(event, 'videos'); loadVideos()">Videos</button>
-        <button class="tablinks active" onclick="openTab(event, 'read')">Read</button>
+        <button class="tablinks active" onclick="openTab(event, 'videos'); loadExternal()">Videos</button>
+        <button class="tablinks active" onclick="openTab(event, 'read'); loadExternal()">Read</button>
     </div>
-    <div id="home" class="bodyitem">
-        <div class="par">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente vero, eveniet aut blanditiis, eligendi quam ratione sit dolores maxime sed nulla voluptatibus earum repellat ullam temporibus deleniti. Voluptatibus, repellendus veritatis.</div>
-        <div class="par">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur quasi aliquam laboriosam, suscipit sed deleniti aperiam quam consequatur esse, ab magnam dolorem. Dolore fugiat dolor nisi iste nostrum distinctio consequatur.</div>
-        <div class="par">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus consequuntur impedit ipsam explicabo, excepturi alias repudiandae, nostrum modi dolor perferendis aliquam officiis laudantium exercitationem odio deleniti vitae, architecto neque nobis!</div>
-    </div>
-    <div id="gallery" class="bodyitem" display="none"></div>
-    <div id="videos" class="bodyitem" display="none" w3-include-html="src/video.html">
-            
-    </div>
-    <div id="read" class="bodyitem" display="none"></div>
+    <div id="home" class="bodyitem"></div>
+    <div id="gallery" class="bodyitem"></div>
+    <div id="videos" class="bodyitem" w3-include-html="src/video.html"></div>
+    <div id="read" class="bodyitem" w3-include-html="src/read.html"></div>
     <button id="backToTop" onclick="scrollToTop()">
         <div class="buttonDiv" id="buttonDiv1"></div>
         <div class="buttonDiv" id="buttonDiv2"></div> 
