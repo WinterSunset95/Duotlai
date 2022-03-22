@@ -18,12 +18,12 @@
     </div>
     <div id="tabs">
         <button id="homeButton" class="tablinks active" onclick="openTab(event, 'home')">Home</button>
-        <button class="tablinks active" onclick="openTab(event, 'gallery')">Gallery</button>
+        <button class="tablinks active" onclick="openTab(event, 'gallery'); loadExternal()">Gallery</button>
         <button class="tablinks active" onclick="openTab(event, 'videos'); loadExternal()">Videos</button>
         <button class="tablinks active" onclick="openTab(event, 'read'); loadExternal()">Read</button>
     </div>
-    <div id="home" class="bodyitem"></div>
-    <div id="gallery" class="bodyitem"></div>
+    <div id="home" class="bodyitem" w3-include-html="src/home.html"></div>
+    <div id="gallery" class="bodyitem" w3-include-html="src/gallery.html"></div>
     <div id="videos" class="bodyitem" w3-include-html="src/video.html"></div>
     <div id="read" class="bodyitem" w3-include-html="src/read.html"></div>
     <button id="backToTop" onclick="scrollToTop()">
